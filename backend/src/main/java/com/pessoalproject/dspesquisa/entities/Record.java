@@ -27,6 +27,10 @@ public class Record implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "game_id")
 	private Game game;
+	
+	public Record() {
+		
+	}
 
 	public Record(Long id, String name, Integer age, Instant moment, Game game) {
 		this.id = id;
