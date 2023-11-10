@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import arrow from "../../assets/arrow.svg"
 import GamerImage from "../../assets/gamer.svg"
 
@@ -15,14 +16,17 @@ const Home = () => {
             <h3 className="home-text-subtitle">
                 Clique no botão abaixo e saiba quais são os jogos que os gamers estão escolhendo!
             </h3>
-            <div className="home-actions">
-                <button className="home-btn">
-                    QUERO SABER QUEM SÃO
-                </button>
-                <div className="home-btn-icon" >
-                    <img src={arrow} alt="" /> 
+            
+            <Link to="/records">
+                <div className="home-actions">
+                    <button className="home-btn">
+                         QUERO SABER QUEM SÃO
+                    </button>
+                        <div className="home-btn-icon" >
+                    <   img src={arrow} alt="" /> 
+                    </div>
                 </div>
-            </div>
+            </Link>
         </div>
 
         <img src={GamerImage} className="home-image"/>

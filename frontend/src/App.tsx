@@ -1,16 +1,12 @@
-import { useState } from 'react'
-
 import './App.css'
-import Header from './components/Header'
-import Home from './pages/Home'
+import Rotas from './Routes'
 
 function App() {
  
 
   return (
     <>
-      <Header/>
-      <Home/>
+      <Rotas/>
     </>
   )
 }
