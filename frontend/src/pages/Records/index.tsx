@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import "./styles.css"
 import axios from "axios"
 import { RecordResponse } from "./types"
+import { formatDate } from "./utils"
 
 const BASE_URL = "http://localhost:8080"
 
@@ -33,7 +34,7 @@ const Records = () => {
         <tbody>
         {recordsResponse?.content.map(record => (   
             <tr key={record.id}>
-             <td>{record.moment}</td>
+             <td>{formatDate(record.moment)}</td>
              <td>{record.name}</td>
              <td>{record.age}</td>
              <td className="text-secondary">{record.gamePlatform}</td>
